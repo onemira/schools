@@ -12,28 +12,38 @@ class School extends Component {
     return (
       <>
         <Header />
+        {/* Navigation Bar */}
         <h2 className="title">
           <Link to={'/'}>
             <span>HOME</span>
           </Link>
         </h2>
-        <div>
+
+        {/* School Details */}
+        <div class="contents">
           <h2>{school.Name}</h2>
-          <ul>
-            <li>{school.Description}</li>
-            <li>School Open: {school.IsOpen.toString()}</li>
-            {school.Teachers.map((teacher, i) => {
-              return (
-                <ul>
-                  <li>
-                    Teacher's Name:{' '}
-                    <Link to={`/schools/${school.Id}/teachers/${teacher.Id}`}>
-                      {teacher.Name}
-                    </Link>
-                  </li>
-                </ul>
-              )
-            })}
+          <p> 👉{school.Description}</p>
+          <ul class>
+            {/* Change Boolean to String */}
+            <li>
+              School Open:
+              {school.IsOpen.toString()}
+            </li>
+            {/* Find a specific teacher */}
+            <li>
+              Teachers:
+              <ul>
+                {school.Teachers.map((teacher, i) => {
+                  return (
+                    <li>
+                      <Link to={`/schools/${school.Id}/teachers/${teacher.Id}`}>
+                        {teacher.Name}
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            </li>
           </ul>
         </div>
       </>

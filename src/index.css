@@ -29,7 +29,7 @@ body {
 }
 
 .title {
-  background-color: rgba(174, 235, 194, 0.199);
+  background-color: rgba(28, 150, 231, 0.199);
   height: 3rem;
   color: rgb(48, 47, 47);
   font-family: 'Libre Baskerville', serif;
@@ -45,10 +45,77 @@ body {
   color: red;
 }
 
-div {
-  padding: 1;
+.contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ol {
+  max-width: 30rem;
+  counter-reset: li; /* Initiate a counter */
+  list-style: none; /*Remove default numbering */
+  list-style: decimal; /* Keep using default numbering for IE6/7 */
+  padding: 0;
+  margin-bottom: 4em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+ol ol {
+  margin: 0 0 0 2em; /* Add some left margin for inner lists */
 }
 
 li {
-  margin: 0 0 10px 0;
+  margin: 10px;
+  padding: 10px;
+  /* list-style: none; */
+}
+
+h2,
+p {
+  margin-left: 10px;
+}
+
+.school-list {
+  list-style: none;
+}
+
+.rounded-list a {
+  position: relative;
+  display: block;
+  padding: 0.4em 0.4em 0.4em 2em;
+  *padding: 0.4em;
+  margin: 0.5em 0;
+  background: rgba(221, 221, 221, 0.438);
+  color: rgb(32, 30, 30);
+  text-decoration: none;
+  border-radius: 0.3em;
+  transition: all 0.3s ease-out;
+}
+
+.rounded-list a:hover {
+  background: #eee;
+}
+
+.rounded-list a:hover:before {
+  transform: rotate(360deg);
+}
+
+.rounded-list a:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #b1def0;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: 0.3em solid #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all 0.3s ease-out;
 }

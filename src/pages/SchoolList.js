@@ -9,18 +9,18 @@ class SchoolList extends Component {
     return (
       <>
         <Header />
-        <main>
-          <header />
-          {SchoolData.Schools.map((school, i) => {
-            return (
-              <ul>
-                <li>
+        <div class="contents">
+          <ol class="rounded-list">
+            {/* Find a specific school */}
+            {SchoolData.Schools.map((school, i) => {
+              return (
+                <li class="school-list">
                   <Link to={`/schools/${school.Id}`}>{school.Name}</Link>
                 </li>
-              </ul>
-            )
-          })}
-        </main>
+              )
+            })}
+          </ol>
+        </div>
       </>
     )
   }

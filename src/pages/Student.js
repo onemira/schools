@@ -20,6 +20,8 @@ class Student extends Component {
     return (
       <>
         <Header />
+
+        {/* Navigation bar */}
         <h2 className="title">
           <Link to={'/'}>
             <span>HOME</span>
@@ -33,8 +35,10 @@ class Student extends Component {
             <span>STUDENTS</span>
           </Link>
         </h2>
-        <div>
-          <h2>{student.Name}</h2>
+
+        {/* Stuent Details */}
+        <div class="contents">
+          <h2> {student.Name}</h2>
           <ul>
             <li>Enrollment Status: {student.IsEnrolled.toString()}</li>
           </ul>

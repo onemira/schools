@@ -11,7 +11,7 @@ class Header extends Component {
         <div>
           <nav className="header">
             <ul>
-              <li className="menu"> * School List * </li>
+              <li className="menu"> * School Info * </li>
             </ul>
           </nav>
         </div>

@@ -16,6 +16,8 @@ class Teacher extends Component {
     return (
       <>
         <Header />
+
+        {/* Navigation Bar */}
         <h2 className="title">
           <Link to={'/'}>
             <span>HOME</span>
@@ -25,7 +27,9 @@ class Teacher extends Component {
             <span>TEACHERS</span>
           </Link>
         </h2>
-        <div>
+
+        {/* Teacher Details */}
+        <div class="contents">
           <h2>{teacher.Name}</h2>
           <ul>
             {teacher.Students.map((student, i) => {
