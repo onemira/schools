@@ -12,6 +12,7 @@ class School extends Component {
     return (
       <>
         <Header />
+
         {/* Navigation Bar */}
         <h2 className="title">
           <Link to={'/'}>
@@ -25,10 +26,7 @@ class School extends Component {
           <p> 👉{school.Description}</p>
           <ul class>
             {/* Change Boolean to String */}
-            <li>
-              School Open:
-              {school.IsOpen.toString()}
-            </li>
+            <li>School Open: {school.IsOpen.toString()}</li>
             {/* Find a specific teacher */}
             <li>
               Teachers:

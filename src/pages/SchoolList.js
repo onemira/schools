@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import SchoolData from '../data/SchoolData.json'
-// import School from './School'
 import Header from '../components/Header'
 
 class SchoolList extends Component {

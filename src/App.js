@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import SchoolList from './pages/SchoolList'
 import Teacher from './pages/Teacher'
