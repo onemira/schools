@@ -23,7 +23,12 @@ class School extends Component {
         {/* School Details */}
         <div class="contents">
           <h2>{school.Name}</h2>
-          <p> 👉{school.Description}</p>
+          <p>
+            <span role="img" aria-label="Finger">
+              👉
+            </span>
+            {school.Description}
+          </p>
           <ul class>
             {/* Change Boolean to String */}
             <li>School Open: {school.IsOpen.toString()}</li>
