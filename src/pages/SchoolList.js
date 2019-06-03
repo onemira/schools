@@ -11,7 +11,7 @@ class SchoolList extends Component {
         <div class="contents">
           <ol class="rounded-list">
             {/* Find a specific school */}
-            {SchoolData.Schools.map((school, i) => {
+            {SchoolData.Schools.map(school => {
               return (
                 <li class="school-list">
                   <Link to={`/schools/${school.Id}`}>{school.Name}</Link>

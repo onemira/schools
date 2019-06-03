@@ -5,6 +5,7 @@ import Header from '../components/Header'
 
 class Teacher extends Component {
   render() {
+    // dynamically find the each school and teacher based on the URL
     const school = SchoolData.Schools.find(
       school => school.Id === this.props.match.params.school_id
     )
@@ -32,7 +33,7 @@ class Teacher extends Component {
         <div class="contents">
           <h2>{teacher.Name}</h2>
           <ul>
-            {teacher.Students.map((student, i) => {
+            {teacher.Students.map(student => {
               return (
                 <ul>
                   <li>

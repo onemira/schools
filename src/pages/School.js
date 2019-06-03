@@ -36,7 +36,7 @@ class School extends Component {
             <li>
               Teachers:
               <ul>
-                {school.Teachers.map((teacher, i) => {
+                {school.Teachers.map(teacher => {
                   return (
                     <li>
                       <Link to={`/schools/${school.Id}/teachers/${teacher.Id}`}>
