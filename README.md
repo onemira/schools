@@ -1,6 +1,6 @@
 # Schools: React Test Application
 
-- [x] use React to make a test application. (You may use another front end language if absolutely needed).
+- [x] use React to make a test application.
 
 - [x] Use the json file to simulate an API call.
 
